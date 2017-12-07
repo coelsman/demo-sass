@@ -201,6 +201,7 @@ header {
 			display: inline-block;
 			color: #fff;
 			font-size: 20px;
+			font-weight: normal;
 		}
 	}
 	.line-row {
@@ -243,6 +244,9 @@ header {
 		&:nth-child(2) {
 			* {
 				color: #191919;
+			}
+			h4 {
+				font-weight: normal;
 			}
 			.date {
 				line-height: 60px;

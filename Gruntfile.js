@@ -22,9 +22,20 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		uglify: {
+			my_target: {
+				files: {
+					'public/js/app.min.js': [
+						'public/src/js/search.js',
+						'public/src/js/app.js'
+					],
+				},
+			},
+		},
 	});
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
-	grunt.registerTask('default', ["concat", "sass"]);
+	grunt.registerTask('default', ["concat", "sass", "uglify"]);
 };
